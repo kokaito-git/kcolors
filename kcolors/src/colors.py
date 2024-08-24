@@ -1,28 +1,4 @@
-class Colors:
-    """
-    A class for automatic color codes and text formatting for terminal output.
-
-    Provides attributes for:
-    - Regular colors and bold colors (bright versions of the regular colors)
-    - Text formatting styles
-
-    Attributes:
-    - Regular colors: BLACK, RED, GREEN, YELLOW, BLUE, PURPLE, CYAN, GRAY
-    - Bold (bright) colors: BBLACK, BRED, BGREEN, BYELLOW, BBLUE, BPURPLE, BCYAN, BGRAY
-    - Text formatting options: BOLD, FAINT, ITALIC, UNDERLINE, BLINK, NEGATIVE, CROSSED
-    - END: Resets all formatting and colors.
-
-    Behavior:
-    - If the output is not to a terminal (i.e., `sys.stdout.isatty()` is False), color codes are disabled to avoid unwanted characters in non-terminal environments.
-    - On Windows systems, enables Virtual Terminal (VT) mode to support ANSI escape sequences by configuring the console mode using the `ctypes` library.
-
-    Usage:
-    - You can use color attributes directly from this class, such as `Colors.BLACK` or `Colors.RED`. For convenience, direct references like `BLACK`, `RED`, etc., are also available.
-      Example usage:
-        print(RED + "This text is red." + END)
-    - If you want to avoid automatic disabling of colors when output is not to a terminal, use the `StatiColors` class instead, which provides static attributes and does not automatically disable colors based on the terminal status.
-    """
-
+class SColors:
     # Regular colors
     BLACK = "\033[0;30m"
     RED = "\033[0;31m"
@@ -52,6 +28,32 @@ class Colors:
     NEGATIVE = "\033[7m"
     CROSSED = "\033[9m"
     END = "\033[0m"  # Reset all formatting
+
+
+class Colors(SColors):
+    """
+    A class for automatic color codes and text formatting for terminal output.
+
+    Provides attributes for:
+    - Regular colors and bold colors (bright versions of the regular colors)
+    - Text formatting styles
+
+    Attributes:
+    - Regular colors: BLACK, RED, GREEN, YELLOW, BLUE, PURPLE, CYAN, GRAY
+    - Bold (bright) colors: BBLACK, BRED, BGREEN, BYELLOW, BBLUE, BPURPLE, BCYAN, BGRAY
+    - Text formatting options: BOLD, FAINT, ITALIC, UNDERLINE, BLINK, NEGATIVE, CROSSED
+    - END: Resets all formatting and colors.
+
+    Behavior:
+    - If the output is not to a terminal (i.e., `sys.stdout.isatty()` is False), color codes are disabled to avoid unwanted characters in non-terminal environments.
+    - On Windows systems, enables Virtual Terminal (VT) mode to support ANSI escape sequences by configuring the console mode using the `ctypes` library.
+
+    Usage:
+    - You can use color attributes directly from this class, such as `Colors.BLACK` or `Colors.RED`. For convenience, direct references like `BLACK`, `RED`, etc., are also available.
+      Example usage:
+        print(RED + "This text is red." + END)
+    - If you want to avoid automatic disabling of colors when output is not to a terminal, use the `StatiColors` class instead, which provides static attributes and does not automatically disable colors based on the terminal status.
+    """
 
     # Handle cases when output is not to a terminal
     if not __import__("sys").stdout.isatty():

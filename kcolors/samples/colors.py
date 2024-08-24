@@ -1,5 +1,5 @@
 from kcolors import Colors
-from kcolors import StaticColors
+from kcolors import SColors
 
 # Dynamic Colors
 BLACK = Colors.BLACK
