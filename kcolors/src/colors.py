@@ -1,4 +1,7 @@
 class SColors:
+    """
+    Static version of Colors.
+    """
     # Regular colors
     BLACK = "\033[0;30m"
     RED = "\033[0;31m"
@@ -46,13 +49,8 @@ class Colors:
 
     Behavior:
     - If the output is not to a terminal (i.e., `sys.stdout.isatty()` is False), color codes are disabled to avoid unwanted characters in non-terminal environments.
-    - On Windows systems, enables Virtual Terminal (VT) mode to support ANSI escape sequences by configuring the console mode using the `ctypes` library.
 
-    Usage:
-    - You can use color attributes directly from this class, such as `Colors.BLACK` or `Colors.RED`. For convenience, direct references like `BLACK`, `RED`, etc., are also available.
-      Example usage:
-        print(RED + "This text is red." + END)
-    - If you want to avoid automatic disabling of colors when output is not to a terminal, use the `StatiColors` class instead, which provides static attributes and does not automatically disable colors based on the terminal status.
+    - If you want to avoid automatic disabling of colors when output is not to a terminal, use the `SColors` class instead.
     """
 
     # Regular colors
@@ -85,14 +83,8 @@ class Colors:
     CROSSED = "\033[9m"
     END = "\033[0m"  # Reset all formatting
 
-    # Handle cases when output is not to a terminal
+    # Convert color codes in "" if program output is not a terminal
     if not __import__("sys").stdout.isatty():
         for _ in dir():
             if isinstance(_, str) and _[0] != "_":
                 locals()[_] = ""
-    else:
-        # Enable VT mode in Windows console
-        if __import__("platform").system() == "Windows":
-            kernel32 = __import__("ctypes").windll.kernel32
-            kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
-            del kernel32

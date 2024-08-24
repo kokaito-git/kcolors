@@ -1,4 +1,15 @@
+"""
+Este modulo contiene referencias directas a las clases Colors y SColors.
+Los colores dinámicos serían BLACK, BRED, END, etc. Los estáticos BLACK_, BRED_, END_, etc.
+  (Nota: puedes obtener las referencias inversas desde irefs)
+"""
 from .colors import Colors, SColors
+
+if "kcolors.irefs" in __import__("sys").modules:
+    raise ImportError(
+        "kcolors: Not allowed to import both 'kcolors.refs' and 'kcolors.irefs' at the same time."
+    )
+
 
 # Dynamic Colors
 BLACK = Colors.BLACK
