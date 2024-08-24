@@ -3,7 +3,7 @@ Este modulo contiene referencias directas a las clases Colors y SColors.
     Los colores dinámicos son BLACK_, BRED_, END_, etc mientras que los estáticos son BLACK, BRED, END, etc.
   (Nota: estas referencias son las inversas de refs)
 """
-from .colors import Colors, SColors
+from .src.colors import Colors, SColors
 
 if "kcolors.refs" in __import__("sys").modules:
     raise ImportError(

@@ -46,8 +46,6 @@ from kcolors.irefs import * # pyright: ignore
 """
 
 from .src.colors import SColors, Colors
-from . import refs
-from . import irefs
 
 # Enable VT mode (for Windows)
 if __import__("sys").stdout.isatty():
