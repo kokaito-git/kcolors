@@ -65,30 +65,3 @@ class Colors:
             kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
             del kernel32
 
-
-BLACK = Colors.BLACK
-RED = Colors.RED
-GREEN = Colors.GREEN
-YELLOW = Colors.YELLOW
-BLUE = Colors.BLUE
-PURPLE = Colors.PURPLE
-CYAN = Colors.CYAN
-GRAY = Colors.GRAY
-
-BBLACK = Colors.BBLACK
-BRED = Colors.BRED
-BGREEN = Colors.BGREEN
-BYELLOW = Colors.BYELLOW
-BBLUE = Colors.BBLUE
-BPURPLE = Colors.BPURPLE
-BCYAN = Colors.BCYAN
-BGRAY = Colors.BGRAY
-
-BOLD = Colors.BOLD
-FAINT = Colors.FAINT
-ITALIC = Colors.ITALIC
-UNDERLINE = Colors.UNDERLINE
-BLINK = Colors.BLINK
-NEGATIVE = Colors.NEGATIVE
-CROSSED = Colors.CROSSED
-END = Colors.END

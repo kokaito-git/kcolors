@@ -45,31 +45,3 @@ class StaticColors:
     CROSSED = "\033[9m"
     END = "\033[0m"  # Reset all formatting
 
-# Direct references to colors and formatting
-BLACK_ = StaticColors.BLACK
-RED_ = StaticColors.RED
-GREEN_ = StaticColors.GREEN
-YELLOW_ = StaticColors.YELLOW
-BLUE_ = StaticColors.BLUE
-PURPLE_ = StaticColors.PURPLE
-CYAN_ = StaticColors.CYAN
-GRAY_ = StaticColors.GRAY
-
-BBLACK_ = StaticColors.BBLACK
-BRED_ = StaticColors.BRED
-BGREEN_ = StaticColors.BGREEN
-BYELLOW_ = StaticColors.BYELLOW
-BBLUE_ = StaticColors.BBLUE
-BPURPLE_ = StaticColors.BPURPLE
-BCYAN_ = StaticColors.BCYAN
-BGRAY_ = StaticColors.BGRAY
-
-BOLD_ = StaticColors.BOLD
-FAINT_ = StaticColors.FAINT
-ITALIC_ = StaticColors.ITALIC
-UNDERLINE_ = StaticColors.UNDERLINE
-BLINK_ = StaticColors.BLINK
-NEGATIVE_ = StaticColors.NEGATIVE
-CROSSED_ = StaticColors.CROSSED
-END_ = StaticColors.END
-
