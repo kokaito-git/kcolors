@@ -1,10 +1,12 @@
 """
+https://github.com/kokaito-git/kcolors
 Automátic ANSI colors for Python Scripts (static colors too)
 
 Classes:
 - Colors: Provides dynamic color codes and text formatting that adapt based on
   whether the output is to a terminal. Includes attributes for regular colors,
   bold colors, and text formatting styles.
+
 - StaticColors: Provides static color codes and text formatting that always output
   as defined, regardless of terminal status.
 
@@ -21,10 +23,15 @@ Usage:
     print(Colors.RED + "This text is red." + Colors.END)
     print(StaticColors.RED + "This text is red." + StaticColors.END)
 
-# References
+# Samples
+## Easy to write references
+from kcolors.references import *
+from kcolors.references import BLUE, BLUE_, RED, ... (_ for static)
+
+## Make your own references, example:
 wget https://raw.githubusercontent.com/kokaito-git/kcolors/main/kcolors/samples/colors.py
 """
 
-from kcolors.src.colors import Colors
-from kcolors.src.static_colors import StaticColors
-
+from .src.colors import Colors
+from .src.static_colors import StaticColors
+from .src.references import *
