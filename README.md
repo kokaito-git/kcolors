@@ -2,11 +2,11 @@
 
 ## Install
 
+Automatic ANSI colors for Python scripts (static colors too).
+
 ```python
 pip install kcolors
 ```
-
-Automatic ANSI colors for Python scripts (static colors too).
 
 Examples of auto-disable colors:
 
