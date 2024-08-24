@@ -22,7 +22,7 @@ Usage:
     print(StaticColors.RED + "This text is red." + StaticColors.END)
 
 # References
-wget https://raw.githubusercontent.com/kokaito-git/kcolors/main/kcolors/sample/colors.py
+wget https://raw.githubusercontent.com/kokaito-git/kcolors/main/kcolors/samples/colors.py
 """
 
 from .src.colors import Colors
