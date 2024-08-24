@@ -25,6 +25,6 @@ Usage:
 wget https://raw.githubusercontent.com/kokaito-git/kcolors/main/kcolors/samples/colors.py
 """
 
-from .src.colors import Colors
-from .src.static_colors import StaticColors
+from kcolors.src.colors import Colors
+from kcolors.src.static_colors import StaticColors
 
