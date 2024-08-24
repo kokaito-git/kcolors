@@ -46,10 +46,4 @@ from kcolors.irefs import * # pyright: ignore
 """
 
 from .src.colors import SColors, Colors
-
-# Enable VT mode (for Windows)
-if __import__("sys").stdout.isatty():
-    if __import__("platform").system() == "Windows":
-            kernel32 = __import__("ctypes").windll.kernel32
-            kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
-            del kernel32
+from . import vt
