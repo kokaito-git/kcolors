@@ -52,5 +52,5 @@ print(f"{RED}Dynamic Color{END} - {RED_}Static Color{END}.")
 
 ```python
 from kcolors.irefs import *  # pyright: ignore
-print(f"{RED}Dynamic Color{END} - {RED_}Static Color{END}.")
+print(f"{RED}Static Color{END} - {RED_}Dynamic Color{END}.")
 ```
