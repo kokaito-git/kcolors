@@ -46,4 +46,7 @@ from kcolors.irefs import * # pyright: ignore
 """
 
 from .src.colors import SColors, Colors
+
+# not sure if vt this should be imported manually or not, so please import it manually
+# with from kcolors import vt to enable vt mode in windows terminal automatically
 from . import vt
